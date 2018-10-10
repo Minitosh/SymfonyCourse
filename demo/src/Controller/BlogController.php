@@ -30,9 +30,17 @@ class BlogController extends Controller
         return $this->render('blog/home.html.twig');
     }
 
+    /**
+     * @Route("/blog/new", name="blog_create")
+     */
+    public function create(){
+
+        return $this->render('blog/create.html.twig');
+    }
+
 
     /**
-     * @Route("blog/{id}", name="blog_show")
+     * @Route("/blog/{id}", name="blog_show")
      */
     public function show(Article $article){
 
