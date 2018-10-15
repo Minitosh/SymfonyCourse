@@ -7,6 +7,7 @@
 <section class="articles">
     
     {% for article in articles %}
+        <br>
         <article>
             <h2>{{ article.title }}</h2>
             <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i') }} dans la catégorie {{ article.category.title }}</div>
@@ -15,6 +16,7 @@
                 {{ article.content | raw }}
                 <a href="{{ path('blog_show', {'id': article.id }) }}" class="btn btn-primary">Lire la suite...</a>
             </div>
+            <br>
         </article>
     {% endfor %}
 
